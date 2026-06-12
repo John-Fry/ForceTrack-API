@@ -1,0 +1,32 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      Mongo__ConnectionString: mongodb://mongo:27017
+      Mongo__DatabaseName: avaliacao_backend
+      Mongo__ClientesCollection: clientes
+      Force1__Login: ${Force1__Login:-}
+      Force1__Senha: ${Force1__Senha:-}
+      Force1__Enterprise: ${Force1__Enterprise:-}
+      GoogleMaps__ApiKey: ${GoogleMaps__ApiKey:-}
+      DocuSign__AccountId: ${DocuSign__AccountId:-}
+      DocuSign__AccessToken: ${DocuSign__AccessToken:-}
+      MicrosoftGraph__AccessToken: ${MicrosoftGraph__AccessToken:-}
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

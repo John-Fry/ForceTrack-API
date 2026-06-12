@@ -1,0 +1,34 @@
+@AvaliacaoBackend.Api_HostAddress = http://localhost:5066
+
+GET {{AvaliacaoBackend.Api_HostAddress}}/produtos
+Accept: application/json
+
+###
+
+POST {{AvaliacaoBackend.Api_HostAddress}}/produtos
+Content-Type: application/json
+
+{
+  "nome": "Teclado",
+  "preco": 250.00
+}
+
+###
+
+GET {{AvaliacaoBackend.Api_HostAddress}}/clientes
+Accept: application/json
+
+###
+
+POST {{AvaliacaoBackend.Api_HostAddress}}/clientes
+Content-Type: application/json
+
+{
+  "nome": "Maria Silva",
+  "email": "maria@email.com"
+}
+
+###
+
+GET {{AvaliacaoBackend.Api_HostAddress}}/ativos/computadores-sem-comunicacao?dias=60
+Accept: application/json
