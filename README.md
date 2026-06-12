@@ -162,7 +162,7 @@ MicrosoftGraph__AccessToken=...
 ```
 
 O arquivo `.env.example` mostra os nomes esperados.
-As credenciais recebidas no enunciado devem ser configuradas localmente, por variavel de ambiente, User Secrets ou `appsettings.Development.json`. Nao envie credenciais reais para repositorios publicos.
+As credenciais recebidas no enunciado devem ser configuradas localmente, por variavel de ambiente, User Secrets ou `appsettings.Development.json`.
 
 ## Observacoes de implementacao
 
