@@ -1,6 +1,6 @@
-# Avaliacao Backend
+# ForceTrack API
 
-Projeto ASP.NET Core criado para responder ao teste tecnico de backend.
+Backend em ASP.NET Core para gestão de ativos, produtos, clientes e serviços externos.
 
 ## Stack
 
